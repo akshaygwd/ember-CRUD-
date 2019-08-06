@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Emtaks</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <li>{{#link-to 'tasks'}}Home{{/link-to}}</li>
+    <li>{{#link-to 'tasks.new'}}New tasks{{/link-to}}</li>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>
