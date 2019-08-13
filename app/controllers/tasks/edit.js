@@ -7,15 +7,12 @@ export default Ember.Controller.extend({
       var title = this.get('model.title');
       var date = this.get('model.date');
       var description = this.get('model.description');
-
-      this.store.findRecord('task', id).then(() => {
+      this.store.findRecord('task', id).then((task) => {
         task.set('title', title);
         task.set('date', new Date(date));
         task.set('decription', description);
         task.save();
-        this.transitionTo('tasks');
-      })
-
+      });
     }
   }
 });

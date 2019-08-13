@@ -8,5 +8,6 @@ export default DS.Model.extend({
     defaultValue: function() {
       return new Date();
     }
-  })
+  }),
+  comments: DS.hasMany('comment', { async: false })
 });

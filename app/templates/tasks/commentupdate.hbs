@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <label>title:</label>
+    <div>{{ give-value model.task.title }}</div>
+  </div>
+  <div class="form-group">
+    <label>date:</label>
+    <div>{{ model.task.date}}</div>
+  </div>
+  <div class="form-group">
+    <label>Description:</label>
+    <div>{{ give-value model.task.description }}</div>
+  </div>
+  <div class="form-group">
+    <label>Comment:</label>
+    {{ textarea class="form-control" value= model.body }}
+  </div>
+  <button {{ action 'updateComment' model.id }} class="btn btn-primary">updateComment</button>
+</form>

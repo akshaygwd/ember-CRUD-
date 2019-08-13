@@ -10,6 +10,9 @@ Router.map(function() {
   this.resource('tasks', function() {
     this.route('new');
     this.route('edit', {path: '/edit/:task_id'});
+    this.route('comment', {path: '/:task_id/comment/new'});
+    this.route('commentupdate', {path: '/:task_id/comment/:comment_id/update'});
+
   });
 });
 

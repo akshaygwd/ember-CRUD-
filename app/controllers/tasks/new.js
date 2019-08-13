@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
         var newTask = this.store.createRecord('task', {
           title: title,
           description: description,
-          date: new Date(date)
+          date: new Date(date),
         })
 
         newTask.save();
